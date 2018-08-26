@@ -1,6 +1,8 @@
 ﻿using CalcFreelancer.Models;
 using CalcFreelancer.Repository;
+using CalcFreelancer.Services;
 using CalcFreelancer.ViewModels.Base;
+using CalcFreelancer.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -73,10 +75,13 @@ namespace CalcFreelancer.ViewModels
 
         public Command GravarCommand { get; }
 
+        private readonly ProfissionalService ProfissionalService;
+
         public CalculoValorHoraPageViewModel()
         {
             GravarCommand = new Command(ExecuteGravarCommand);
             Profissional = new Profissional();
+            ProfissionalService = new ProfissionalService();
         }
 
         private void CalcularValorHora()
@@ -104,10 +109,10 @@ namespace CalcFreelancer.ViewModels
             Profissional.DiasFeriasPorAno = DiasFeriasPorAno;
             Profissional.ValorPorHora = ValorDaHora;
 
-            var profissionalAzureClient = new AzureRepository();
-            profissionalAzureClient.Insert(Profissional);
+            ProfissionalService.Inserir(Profissional);
 
-            await App.Current.MainPage.DisplayAlert("Sucesso", "Valor por hora gravado!", "Ok");
+            await App.Current.MainPage.Navigation.PushAsync(new CalculoValorHoraSucessoPage());
+            //await App.Current.MainPage.DisplayAlert("Sucesso", "Valor por hora gravado!", "Ok");
         }
     }
 }

@@ -2,8 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              Title="Projeto"
-             Padding="10"
+             Padding="10"             
+             xmlns:converters="clr-namespace:CalcFreelancer.Converters"
              x:Class="CalcFreelancer.ProjetoPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:MoedaConverter x:Key="MoedaConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Nome do Projeto" />
@@ -13,7 +21,7 @@
                 <Label Text="Valor por hora" />
                 <Entry Placeholder="Valor por hora"
                    Keyboard="Numeric"
-                    Text="{Binding ValorPorHora}" />
+                    Text="{Binding ValorPorHora, Converter={StaticResource MoedaConverter}}" />
 
                 <Label Text="Horas por dia" />
                 <Entry Placeholder="Horas por dia"

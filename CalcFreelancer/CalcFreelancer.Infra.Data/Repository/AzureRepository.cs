@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalcFreelancer.Repository
 {
-    class AzureRepository
+    public class AzureRepository
     {
         private IMobileServiceClient Client;
         private IMobileServiceTable<Profissional> Table;
