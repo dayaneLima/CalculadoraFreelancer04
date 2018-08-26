@@ -45,7 +45,7 @@ Vamos repetir o processo anterior novamente, mas agora vamos chamar de CalcFreel
 
 Nossa estrutura do projeto ficou da seguinte forma:
 
-<img src="https://github.com/dayaneLima/CalculadoraFreelancer04/blob/master/Docs/Imgs/aula_04_estrutura_projeto.png" alt="Criação projeto >NET Standard" width="100%">
+<img src="https://github.com/dayaneLima/CalculadoraFreelancer04/blob/master/Docs/Imgs/aula_04_estrutura_projeto.png" alt="Criação projeto >NET Standard" width="260">
 
 ## Reestruturação dos arquivos
 
@@ -82,7 +82,7 @@ Vamos agora arrastar a classe Profissional que está dentro de Models do projeto
 
 Agora nossa classe Profissional pode herdar da classe Entity, vamos então adicionar ao nosso projeto uma referência para o projeto CalcFreelancer.Domain.Core. Dentro do projeto CalcFreelancer.Domain, em Dependencies, clique com o botão direito e vá em Add reference, na tela que irá abrir, vá em Projects e marque o projeto CalcFreelancer.Domain.Core e clique em Ok.
 
-<img src="https://github.com/dayaneLima/CalculadoraFreelancer04/blob/master/Docs/Imgs/aula_04_add_reference.png" alt="Criação projeto >NET Standard" width="100%">
+<img src="https://github.com/dayaneLima/CalculadoraFreelancer04/blob/master/Docs/Imgs/aula_04_add_reference.png" alt="Criação projeto >NET Standard" width="300">
 
 
 <img src="https://github.com/dayaneLima/CalculadoraFreelancer04/blob/master/Docs/Imgs/aula_04_add_reference_02.png" alt="Criação projeto >NET Standard" width="100%">
@@ -572,7 +572,7 @@ Ficando assim a nossa tela completa:
 </ContentPage>
 ````
 
-## Plus: Lottie para Xamarin Forms
+## Adicional: Lottie para Xamarin Forms
 
 ### O que é Lottie?
 
@@ -830,4 +830,4 @@ public class CalculoValorHoraPageViewModel : ViewModelBase
 
 ## Resultado
 
-<img src="https://github.com/dayaneLima/CalculadoraFreelancer04/blob/master/Docs/Gifs/ResultadoAppTelaSucesso.gif" alt="App coma tela de sucesso" width="100%">
+<img src="https://github.com/dayaneLima/CalculadoraFreelancer04/blob/master/Docs/Gifs/ResultadoAppTelaSucesso.gif" alt="App coma tela de sucesso" width="260">
